@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserHomePage">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/Green">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/cantora_one"
+            android:text="MS PATHOLOGY LAB"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/notificationButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_notification"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Notification Button" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_below="@id/headerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagerMain"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="Image Slider"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bookingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Heading for the card -->
+                    <TextView
+                        android:id="@+id/bookingHeading"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:text="Book a Home VISIT"
+                        android:textSize="18sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/fullNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/bookingHeading"
+                        android:layout_marginTop="16dp"
+                        android:hint="Full Name"
+                        android:background="@drawable/edit_text_border"
+                        android:padding="8dp"/>
+
+                    <!-- EditText for "Email ID" -->
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/fullNameEditText"
+                        android:layout_marginTop="16dp"
+                        android:hint="Email ID"
+                        android:background="@drawable/edit_text_border"
+                        android:padding="8dp"/>
+
+                    <!-- EditText for "Mobile Number" -->
+                    <EditText
+                        android:id="@+id/mobileEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/emailEditText"
+                        android:layout_marginTop="16dp"
+                        android:hint="Mobile Number"
+                        android:background="@drawable/edit_text_border"
+                        android:padding="8dp"/>
+
+                    <!-- Spinner for "Select Health Checkup" -->
+                    <Spinner
+                        android:id="@+id/healthCheckupSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/mobileEditText"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/edit_text_border"
+                        android:padding="8dp"/>
+
+                    <!-- Button for "Book a Home Visit" -->
+                    <Button
+                        android:id="@+id/bookHomeVisitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/healthCheckupSpinner"
+                        android:layout_marginTop="16dp"
+                        android:text="Request A Call Back"
+                        android:clickable="true"
+                        android:enabled="true"
+                        android:elevation="8dp"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TruHealth Packages"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose from our wide range of \nTruHealth Packages and Health Checkups"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/cardSliderLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/cardViewPager"
+                    android:layout_width="wrap_content"
+                    android:contentDescription="viepager"
+                    android:layout_height="290dp"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Tests"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose from our wide range of \nTruHealth Packages and Health Checkups"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/svgCardSliderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardSliderLayout"
+                android:layout_marginTop="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- First Pair of Cards -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/svgCardViewPager1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:contentDescription="1"
+                            android:layout_height="200dp" />
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/svgCardViewPager2"
+                            android:layout_width="0dp"
+                            android:contentDescription="2"
+                            android:layout_weight="1"
+                            android:layout_height="200dp" />
+
+                    </LinearLayout>
+
+                    <!-- Second Pair of Cards -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/svgCardViewPager3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:contentDescription="3"
+                            android:layout_height="200dp" />
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/svgCardViewPager4"
+                            android:layout_width="0dp"
+                            android:contentDescription="4"
+                            android:layout_weight="1"
+                            android:layout_height="200dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test By Health Risks"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose test by health risks"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/iconRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                android:paddingStart="14dp"
+                android:paddingEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test By Health Conditions"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="choose test by health rconditions"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/icon2RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                android:paddingStart="14dp"
+                android:paddingEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:background="@drawable/green_background">
+
+                <TextView
+                    android:id="@+id/why"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Why MS Pathology ?"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="25sp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+                <View
+                    android:layout_width="200dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/Green"
+                    android:layout_below="@+id/sub" />
+
+                <TextView
+                    android:id="@+id/sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MS pathology has been present over 40 year in the market"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@+id/why"
+                    android:textColor="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_below="@+id/sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="MS Pathology has a team of 200 senior pathologists and over 2000 technicians delivering diagnostic solutions in the areas of routine, semi-specialty, and super-specialty domains like Oncology, Neurology, Gynaecology, Nephrology, and many more.\n\nWe offer a comprehensive range of 4000+ clinical laboratory tests and profiles, which are used for prediction, early detection, diagnostic screening, confirmation, and/or monitoring of the disease."
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/descriptionTextView"
+                    android:rowCount="2"
+                    android:columnCount="2" >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" >
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/lab" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="170+ Advanced\n Lab"
+                                android:textStyle="bold"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/over_2000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Over 200+\nScientific Officiers"
+                                android:textStyle="bold"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/trusted_lab" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Trusted By Leading\nDoctors and Hospitals"
+                                android:textStyle="bold"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:layout_gravity="fill"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical|center_horizontal">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/testing" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Proficiency Testing For\nAccurate Reports"
+                                android:textStyle="bold"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What Our Customers Say"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="we're satisfying our cutomers every day since 2005"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="15sp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:background="@drawable/card_background"
+                android:id="@+id/testimonialViewPager"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="200dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/testimonialViewPager"
+                android:background="@drawable/green_background"
+                android:rowCount="2"
+                android:padding="20dp"
+                android:columnCount="2" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40+\nYears of Credible\nOperations"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="120+\nCities PAN India\nPresence"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="60dp"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="170+\nAdvanced Clinical\nLabs"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12000 +\nPatient Touch\nPoints"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:textAlignment="center"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="60dp"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed-medium"/>
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Know More"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+            <TextView
+                android:id="@+id/descriptionTextView2"
+                android:layout_below="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="MS Pathology Laboratory is one of leading and renowned Indian diagnostics companies. The Company owns a chain of diagnostic centres across India, South Asia, Africa and the Middle East. Over the years, Metropolis has carved a nichefor itself..."
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/readmore"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionTextView2"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_centerHorizontal="true"
+                android:text="Read More" />
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_menu" />
+</RelativeLayout>

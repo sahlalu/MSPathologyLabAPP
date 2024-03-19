@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MS Pathology Lab</string>
+    <string name="added_to_cart_message">Item added to cart!</string>
+    <string name="homepage">Back To HomePage</string>
+    <string name="order">We Receieved Your Order</string>
+    <string name="order_success">Order Placed Successfully</string>
+    <string name="aboutus">MS Pathology Limited is one of the leading and renowned Indian diagnostics companies. The Company owns a chain of diagnostic centres across India, South Asia, Africa, and the Middle East. Over the years, MS Pathology has carved a niche for itself.\n\n
+
+The Company enjoys a loyal customer base, reflecting its strength as a brand offering superior diagnostic tests and services.\n\nWith its widespread operational network, MS Pathology offers a comprehensive range of clinical laboratory tests and profiles. These tests and profiles are used for prediction, early detection, diagnostic screening, confirmation, and/or monitoring of diseases.</string>
+    <string name="about2">The Company’s broad spectrum of services offer around 3,487 clinical laboratory tests and 530 profiles. Various test combinations, specific to a disease or disorder and wellness profiles used for health and fitness screening form a part of the Company’s service profile.\n\n
+
+MS Pathology has invested in a variety of specialized tests and also adopted several advanced tests and technologies introduced in the global market. As on date, the Company offers 2,799 specialized tests. One of the prime reasons behind the Company’s leading position in the diagnostics industry is its track record of introducing specialized tests.</string>
+
+
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="health_checkup_options">
+        <item>ECG Test</item>
+        <item>Influenza Panel</item>
+        <item>Diabetes HbA1C Test</item>
+        <item>Thyroid Test</item>
+        <item>CBC Test</item>
+        <item>Vitamin D Test</item>
+        <item>Liver Function Test</item>
+        <item>Urine Test</item>
+        <item>Blood Test</item>
+        <item>Health Package</item>
+        <item>Covid-19 RT PCR Test</item>
+        <item>Covid Antibody Test</item>
+
+    </string-array>
+
+    <string-array name="blood_group_options">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+
+    </string-array>
+
+    <string-array name="test_names">
+        <item>Lipid Profile</item>
+        <item>Liver Function Test-1</item>
+        <item>Prothrombin Time</item>
+        <item>Renal(Kidney) Function Tests</item>
+        <item>SGPT ALT Serum</item>
+        <item>Thyroid Panel-1 (T3/T4/TSH)</item>
+        <item>TSH(Ultrasensitive) ECLIA Serum</item>
+        <item>Urea Test Serum</item>
+        <item>Uric Acid Serum</item>
+        <item>Vitamin B12 Cyanocobalamin</item>
+        <item>Complete Blood Count (CBC)</item>
+        <item>Electrolyte Panel (Sodium/Potassium)</item>
+        <item>Fasting Blood Sugar (FBS)</item>
+        <item>HbA1c Glycated Hemoglobin</item>
+        <item>Hepatitis B Surface Antigen(HBsAg)</item>
+        <item>Hepatitis C Antibody Anti-HCV</item>
+        <item>HIV Screening ELISA</item>
+        <item>Lipase Test Serum</item>
+        <item>Pregnancy Test HCG</item>
+        <item>Rapid Malaria Test (RDT)</item>
+        <!-- Add more test names here -->
+    </string-array>
+</resources>

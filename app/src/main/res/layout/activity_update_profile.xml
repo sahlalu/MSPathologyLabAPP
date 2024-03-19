@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/Green">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="MS PATHOLOGY LAB"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/notificationButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Notification Button"
+            android:src="@drawable/ic_notification" />
+
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                app:cardCornerRadius="250dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="250dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageViewProfile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/ic_user"
+                        android:scaleType="centerCrop"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Edit Profile Picture Button -->
+            <Button
+                android:id="@+id/buttonEditPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile Picture"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Name -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Name"
+                android:paddingStart="20dp"
+                android:background="@drawable/edit_text_border"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:paddingStart="20dp"
+                android:background="@drawable/edit_text_border"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Phone Number -->
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Phone Number"
+                android:paddingStart="20dp"
+                android:background="@drawable/edit_text_border"
+                android:inputType="phone"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- City -->
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="City"
+                android:paddingStart="20dp"
+                android:background="@drawable/edit_text_border"
+                android:inputType="text"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Zip Code -->
+            <EditText
+                android:id="@+id/editTextZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Zip Code"
+                android:paddingStart="20dp"
+                android:background="@drawable/edit_text_border"
+                android:inputType="number"
+                android:layout_marginBottom="40dp"/>
+
+            <!-- Update Profile Button -->
+            <Button
+                android:id="@+id/buttonUpdateProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Profile"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+</RelativeLayout>

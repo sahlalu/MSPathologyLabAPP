@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    <TextView
+        android:id="@+id/Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill The Below Details"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/patientNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Name : "
+        android:textStyle="bold"
+        android:layout_below="@id/Heading"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/patientName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/patientNameLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Patient Name"
+        android:background="@drawable/border"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:id="@+id/linearCityZip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patientName"
+        android:orientation="horizontal">
+
+        <!-- Age -->
+        <TextView
+            android:id="@+id/ageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age :"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:hint="Age"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:background="@drawable/border"
+            android:padding="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Blood Group -->
+        <TextView
+            android:id="@+id/bloodGroupLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Group : "
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"/>
+
+        <Spinner
+            android:id="@+id/bloodGroupSpinner"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/border"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Select Date -->
+    <TextView
+        android:id="@+id/selectDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Test Date : "
+        android:textStyle="bold"
+        android:layout_below="@id/linearCityZip"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/selectDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/selectDateLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Select Date"
+        android:background="@drawable/border"
+        android:focusable="false"
+        android:clickable="true"
+        android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Id: "
+            android:textStyle="bold"
+            android:layout_below="@id/selectDateEditText"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/emailLabel"
+            android:layout_marginTop="8dp"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/border"
+            android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/contactNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number : "
+        android:textStyle="bold"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/contactNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/contactNumberLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Contact Number"
+        android:inputType="number"
+        android:background="@drawable/border"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/fullAddressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Address : "
+        android:textStyle="bold"
+        android:layout_below="@id/contactNumberEditText"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/fullAddressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/fullAddressLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Full Address"
+        android:background="@drawable/border"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/zipCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZIP Code : "
+        android:textStyle="bold"
+        android:layout_below="@id/fullAddressEditText"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/zipCodeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/zipCodeLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter ZIP Code"
+        android:inputType="number"
+        android:background="@drawable/border"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/selectedtest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tests: "
+        android:textStyle="bold"
+        android:layout_below="@id/zipCodeEditText"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/testInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_below="@id/selectedtest"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/totalPriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_below="@id/testInfoTextView"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Proceed To Pay"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/totalPriceTextView"
+        android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>
+</ScrollView>

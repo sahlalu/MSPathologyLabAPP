@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DownloadReportActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/Green">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="MS PATHOLOGY LAB"
+            android:fontFamily="@font/cantora_one"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/notificationButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Notification Button"
+            android:src="@drawable/ic_notification" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logtv2"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/headerLayout"
+        android:fontFamily="@font/muli_black"
+        android:layout_marginTop="30dp"
+        android:text="Track Your Order"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/logtv2"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:background="@drawable/edit_text_border2"
+        android:hint="Enter Email ID"/>
+
+    <Button
+        android:id="@+id/downloadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginTop="20dp"
+        android:text="Track Your Order" />
+
+    <TextView
+        android:id="@+id/logtv3"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/downloadButton"
+        android:fontFamily="@font/muli_black"
+        android:layout_marginTop="30dp"
+        android:text="Order Status"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/track"
+        android:layout_width="match_parent"
+        android:layout_height="400dip"
+        android:layout_below="@id/logtv3"
+        android:layout_marginTop="-21dp"
+        android:elevation="4dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/track"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:layout_below="@id/logtv3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/progressBar"
+        android:layout_width="12dip"
+        android:rotation="180"
+        android:layout_height="300dip"
+        android:progress="0"
+        android:visibility="gone"
+        style="@style/Widget.ProgressBar.Vertical"
+        />
+
+
+    <TextView
+        android:id="@+id/textOrderConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="45dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-298dp"
+        android:text="Order Confirmed\norder confirmed we will reached to you within 5 days"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textShopped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="-209dp"
+        android:text="Sample Collected\nSample Collected! Processing Your Samples.."
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textOutOfDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="-107dp"
+        android:text="Processing Test\nYour Test Results is Under Process.."
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textDelivered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="-15dp"
+        android:textStyle="bold"
+        android:layout_marginStart="45dp"
+        android:text="Report Genrated !\nReport Downloaded Successfully"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/logtv4"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:fontFamily="@font/muli_black"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:text="Order Does Not\n Exists.."
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/logtv5"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:fontFamily="@font/muli_black"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:text="Report Downloaded\nSuccessfully"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/logtv6"
+        android:layout_marginStart="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar"
+        android:fontFamily="@font/muli_black"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:text="Processing Your\nRequest..."
+        android:textSize="25sp" />
+
+</RelativeLayout>
