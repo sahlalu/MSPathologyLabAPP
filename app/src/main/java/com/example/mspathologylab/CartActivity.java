@@ -152,11 +152,8 @@ public class CartActivity extends AppCompatActivity {
 
 
     private double parsePrice(String price) {
-        // Assuming the price format is "Rs.XXX", so we need to remove "Rs." and parse the rest as double
         String priceWithoutCurrency = price.replace("Rs.", "").trim();
-        // Replace any commas with empty string to handle cases like Rs.3,000
         priceWithoutCurrency = priceWithoutCurrency.replace(",", "");
-        // Parse the price string to double
         return Double.parseDouble(priceWithoutCurrency);
     }
 }
